@@ -1,0 +1,90 @@
+body {
+    background-color: #000000;
+    font-family: 'Press Start 2P', cursive;    
+    text-align: center;
+    height: 100vh;
+    padding: 5px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #000000, #6b0e0e);
+}
+
+canvas {
+    border: 5px solid #0a0a0a;
+    border-radius: 10px;    
+    display: block;
+    margin: 50px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('imagens/bckghogwarts.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* we will make the end menu overlap the game canvas, so we need here a lower z-index */
+    z-index: 1;
+}
+
+.backdrop-blur {
+    filter: blur(5px);
+}
+
+#end-menu {
+    /* we will toggle then the display of the end-menu */
+    display: flex;
+    margin: 50px auto;
+    width: 25%;
+    height: auto;
+    justify-content: center;    
+    text-align: center;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 1000;
+    
+}
+
+#spacebar{
+    display: center;
+    text-align: center;
+    position: center;
+    margin-block-end: -40px;
+}
+
+#score-display {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background-color: #aa2424;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-device-width: 900px) {
+    .body{ width: 100%;}
+}
+@media only screen and (max-device-width: 900px) {
+    .body { width: 600px;}
+}
+@media only screen and (max-device-width: 700px) {
+    .body { width: 400px;}
+}
